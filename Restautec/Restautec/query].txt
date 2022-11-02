@@ -1,0 +1,47 @@
+use restautec_bd;
+
+SELECT 
+	CASE
+		WHEN valor = 'true' THEN valor
+		ELSE valor
+	END
+FROM  (
+SELECT DISTINCT 
+	 IF( id_pedido = NULL,'true' , 'false') valor
+from itens_pedido  WHERE id_pedido = 26) tab;
+
+
+
+
+SELECT DISTINCT 
+    id_pedido
+from itens_pedido  WHERE id_pedido = 32;
+
+SELECT 
+		it.id_item_pedido,	
+		p.id_pedido,
+		c.descricao,
+		it.valor_item,
+		p.data_pedido
+FROM itens_pedido it
+
+INNER JOIN cardapio c
+		on c.id_cardapio = it.id_cardapio
+INNER JOIN pedido p
+		ON p.id_pedido = it.id_pedido
+WHERE p.num_mesa = 1  and p.status_pedido = 'Aberto'
+ORDER BY it.id_item_pedido;
+
+
+SELECT * FROM mesas;
+SELECT * FROM pedido WHERE id_pedido = 36 and num_mesa = 1;
+update mesas set status_mesa = 'OCUPADO' WHERE num_mesa = 6;
+SELECT * FROM itens_pedido WHERE id_pedido = 36;
+
+UPDATE mesas SET status_mesa = 'Livre' WHERE num_mesa = 12;
+
+UPDATE pedido SET status_pedido = 'Fechado' WHERE id_pedido IN(27,32,34,35);
+SELECT id_pedido FROM pedido WHERE status_pedido = 'Aberto';
+
+SELECT * FROM mesas where num_mesa = 1 and status_mesa = 'OCUPADO';
+

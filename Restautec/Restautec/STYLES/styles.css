@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #F2B56B;
+}
+
+.div-num-mesa{
+    width: 100px;
+    height: 100px;
+    background-color: ccc;
+    border-radius: 10px;
+}
+
+.num-pedido{
+    font-size: 3em;
+    font-weight: bold;
+    background-color:#D9B1A3 ;
+    color: #401201;
+    width: 80px;
+    height: 80px;
+}
+
+
+.num-mesa{
+    font-size: 3em;
+    font-weight: bold;
+    background-color:#D9B1A3 ;
+    color: #401201;
+    width: 100px;
+    height: 100px;
+}
+
+.bg-green{
+    background-color:#D9B1A3 ;
+}
+
+.color-red{
+    color: #401201!important;
+}
+
+
+.data-hora{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 1.2em;
+    color: #401201!important;
+}
+
+.container-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A64F3C;
+}
+
+
+.lbl-total, .txt-total{
+    font-size: 2em;
+    font-weight: 600;
+    
+}
+.txt-total{
+    color: #0D0D0D;
+}
+.lbl-total{
+    color: #734022;
+}
